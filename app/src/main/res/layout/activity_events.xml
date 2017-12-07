@@ -22,5 +22,10 @@
         android:layout_margin="@dimen/activity_horizontal_margin"
         android:gravity="center"
         android:text=""/>
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/listview">
 
+    </ListView>
 </LinearLayout>
