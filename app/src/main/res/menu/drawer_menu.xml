@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@+id/groupone" android:checkableBehavior="single">
+    <item
+        android:id="@+id/menu_home"
+        android:icon="@android:drawable/ic_menu_camera"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/menu_syllabus"
+        android:icon="@android:drawable/ic_menu_gallery"
+        android:title="Syllabus" />
+
+    <item
+        android:id="@+id/menu_question_papers"
+        android:icon="@android:drawable/ic_menu_set_as"
+        android:title="Question papers" />
+
+    <item
+        android:id="@+id/menu_answer_papers"
+        android:icon="@android:drawable/ic_menu_call"
+        android:title="Answer papers" />
+    </group>
+    <group android:id="@+id/grouptwo" android:checkableBehavior="single">
+    <item
+        android:id="@+id/menu_download"
+        android:icon="@android:drawable/ic_menu_set_as"
+        android:title="Download" />
+
+    <item
+        android:id="@+id/menu_subscribed"
+        android:icon="@android:drawable/ic_menu_call"
+        android:title="Subscribed" />
+    </group>
+    <group android:id="@+id/groupthree" android:checkableBehavior="single">
+    <item
+        android:id="@+id/menu_events"
+        android:icon="@android:drawable/ic_menu_call"
+        android:title="Events" />
+    <item
+        android:id="@+id/menu_about_us"
+        android:icon="@android:drawable/ic_menu_call"
+        android:title="About us" />
+    </group>
+</menu>
