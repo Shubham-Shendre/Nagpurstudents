@@ -11,7 +11,9 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
-
+/**
+ * Created by shubham dilip shendre aka SdS for nagstud Project nagpurstudents
+ */
 public class SyllabusActivity extends AppCompatActivity {
     // Declare Variables
     ListView list;

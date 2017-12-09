@@ -11,10 +11,8 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
-/**
- * Created by shubham dilip shendre aka SdS for nagstud Project nagpurstudents
- */
-public class SubscribedActivity extends AppCompatActivity {
+
+public class Answers_Activity2 extends AppCompatActivity {
     // Declare Variables
     ListView list;
     ListViewAdapter adapter;
@@ -26,10 +24,10 @@ public class SubscribedActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_subscribed);
+        setContentView(R.layout.activity_answers2);
 
         TextView textView = findViewById(R.id.text_view);
-        textView.setText("A TextView in subscribed activity");
+        textView.setText("A TextView in about us activity");
 
         Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -39,15 +37,13 @@ public class SubscribedActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         // Generate sample data into string arrays
-        rank = new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" };
+        rank = new String[] { "1", "2", "3", "4" };
 
         country = new String[] { "China", "India", "United States",
-                "Indonesia", "Brazil", "Pakistan", "Nigeria", "Bangladesh",
-                "Russia", "Japan" };
+                "Indonesia" };
 
         population = new String[] { "1,354,040,000", "1,210,193,422",
-                "315,761,000", "237,641,326", "193,946,886", "182,912,000",
-                "170,901,000", "152,518,015", "143,369,806", "127,360,000" };
+                "315,761,000", "237,641,326" };
 
         flag = new int[] { R.drawable.china, R.drawable.india,
                 R.drawable.unitedstates, R.drawable.indonesia,
@@ -67,7 +63,7 @@ public class SubscribedActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
-                Intent i = new Intent(SubscribedActivity.this, SingleItemView.class);
+                Intent i = new Intent(Answers_Activity2.this, SingleItemView.class);
                 // Pass all data rank
                 i.putExtra("rank", rank);
                 // Pass all data country

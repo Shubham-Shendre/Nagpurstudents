@@ -7,9 +7,8 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 /**
- * Created by dell on 12/7/2017.
+ * Created by shubham dilip shendre aka SdS for nagstud Project nagpurstudents
  */
 
 public class ListViewAdapter extends BaseAdapter {

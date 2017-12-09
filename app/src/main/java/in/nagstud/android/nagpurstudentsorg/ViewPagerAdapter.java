@@ -3,7 +3,9 @@ package in.nagstud.android.nagpurstudentsorg;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-
+/**
+ * Created by shubham dilip shendre aka SdS for nagstud Project nagpurstudents
+ */
 public class ViewPagerAdapter extends FragmentPagerAdapter {
 
     public ViewPagerAdapter(FragmentManager fm) {

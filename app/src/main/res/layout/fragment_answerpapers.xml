@@ -1,14 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
+    <!--
+    * Created by shubham dilip shendre aka SdS for nagstud Project nagpurstudents
+    -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="@dimen/activity_horizontal_margin">
-    <!-- display thetext from fragment answerpapers.java -->
-    <TextView
-        android:id="@+id/text_view"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="A TextView in Fragment" />
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/selectBranch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Branch"
+            android:background="@color/colorWhite"
+            android:onClick="selectBranch"
+            />
+
+        <Button
+            android:id="@+id/selectSem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Sem"
+            android:background="@color/colorWhite"
+            android:onClick="selectSem"/>
+
+    </LinearLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/listview"/>
 </LinearLayout>

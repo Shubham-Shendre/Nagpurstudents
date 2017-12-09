@@ -11,4 +11,49 @@
     <string name="ranklabel">"Rank : "</string>
     <string name="countrylabel">"Country : "</string>
     <string name="populationlabel">"Population : "</string>
+    <string name="os">Mobileos</string>
+    <string name="corporation">Corporation</string>
+    <string-array name="my_items">
+
+        <item>Subject 1</item>
+        <item>Subject 2</item>
+        <item>Subject 3</item>
+        <item>Subject 4</item>
+        <item>Subject 5</item>
+        <item>Subject 6</item>
+        <item>Subject 7</item>
+        <item>Subject 8</item>
+        <item>Subject 9</item>
+        <item>Subject 10</item>
+        <item>Subject 11</item>
+        <item>Subject 12</item>
+        <item>Subject 13</item>
+        <item>Subject 14</item>
+    </string-array>
+    <string-array name="years">
+        <item>Winter 2007</item>
+        <item>Winter 2008</item>
+        <item>Winter 2009</item>
+        <item>Winter 2010</item>
+        <item>Winter 2011</item>
+        <item>Winter 2012</item>
+        <item>Winter 2013</item>
+        <item>Winter 2014</item>
+        <item>Winter 2015</item>
+        <item>Winter 2016</item>
+        <item>Winter 2017</item>
+        <item>Winter 2018</item>
+        <item>Summer 2008</item>
+        <item>Summer 2009</item>
+        <item>Summer 2010</item>
+        <item>Summer 2011</item>
+        <item>Summer 2012</item>
+        <item>Summer 2013</item>
+        <item>Summer 2014</item>
+        <item>Summer 2015</item>
+        <item>Summer 2016</item>
+        <item>Summer 2017</item>
+        <item>Summer 2018</item>
+
+    </string-array>
 </resources>

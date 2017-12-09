@@ -2,17 +2,21 @@ package in.nagstud.android.nagpurstudentsorg;
 /**
  * Created by shubham dilip shendre aka SdS for nagstud Project nagpurstudents
  */
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class SingleItemView extends AppCompatActivity {
+public class Answers_Activity1 extends AppCompatActivity {
     // Declare Variables
     TextView txtrank;
     TextView txtcountry;
@@ -28,14 +32,24 @@ public class SingleItemView extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.singleitemview);
+        setContentView(R.layout.activity_answers1);
 
+        TextView textView = findViewById(R.id.activityname);
+        textView.setText("A TextView in answer activity");
+
+        TextView textView2 = findViewById(R.id.buy);
+
+
+        Button button1 = (Button)findViewById(R.id.buynow);
+        Button button2 = (Button)findViewById(R.id.addtocart);
         Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         ActionBar actionBar = getSupportActionBar();
         actionBar.setTitle(getIntent().getStringExtra(String.valueOf(country)));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        CardView cardView = (CardView)findViewById(R.id.card_view);
 
         // Retrieve data from MainActivity on listview item click
         Intent i = getIntent();
@@ -66,7 +80,31 @@ public class SingleItemView extends AppCompatActivity {
         // Load the image into the ImageView followed by the position
         imgflag.setImageResource(flag[position]);
 
+        //
 
+        //
+
+
+        //add nav bottom
+        BottomNavigationView bottomNavigationView = (BottomNavigationView)
+                findViewById(R.id.bottom_navigation);
+/*
+        bottomNavigationView.setOnNavigationItemSelectedListener(
+                new BottomNavigationView.OnNavigationItemSelectedListener() {
+                    @Override
+                    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                        switch (item.getItemId()) {
+                            case R.id.action_favorites:
+
+                            case R.id.action_schedules:
+
+                            case R.id.action_music:
+
+                        }
+                        return true;
+                    }
+                });
+*/
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -80,4 +118,16 @@ public class SingleItemView extends AppCompatActivity {
     public void onBackPressed() {
         finish();
     }
+    public void buynow(View view)
+    {
+
+        Intent intent = new Intent(Answers_Activity1.this, Answers_Activity2.class);
+        startActivity(intent);
+
+    }
+    public void addtocart(View view)
+    {
+
+    }
+
 }
