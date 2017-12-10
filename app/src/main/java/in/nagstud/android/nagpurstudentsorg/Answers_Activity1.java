@@ -1,7 +1,9 @@
 package in.nagstud.android.nagpurstudentsorg;
+//this class file handle the activity_answer1.xml file
 /**
  * Created by shubham dilip shendre aka SdS for nagstud Project nagpurstudents
  */
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -17,7 +19,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class Answers_Activity1 extends AppCompatActivity {
-    // Declare Variables
+    // Declare Variables for the data of
     TextView txtrank;
     TextView txtcountry;
     TextView txtpopulation;
@@ -30,28 +32,31 @@ public class Answers_Activity1 extends AppCompatActivity {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_answers1);
-
+        //add the textview into class file add for display activity name
         TextView textView = findViewById(R.id.activityname);
+        //send the text from class to xml for activity name textview
         textView.setText("A TextView in answer activity");
-
+        //add the textview in class file show the buy text
         TextView textView2 = findViewById(R.id.buy);
 
-
-        Button button1 = (Button)findViewById(R.id.buynow);
-        Button button2 = (Button)findViewById(R.id.addtocart);
-        Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar);
+        //add the buy now button into class file
+        Button button1 = (Button) findViewById(R.id.buynow);
+        //add the add to cart button into class file
+        Button button2 = (Button) findViewById(R.id.addtocart);
+        //add the toolbar into xml file activity
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
+        //set the default action for the arrow press back
         ActionBar actionBar = getSupportActionBar();
+        //set the title for the action bar
         actionBar.setTitle(getIntent().getStringExtra(String.valueOf(country)));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        // insert the card view for buy now and add to cart button
+        CardView cardView = (CardView) findViewById(R.id.card_view);
 
-        CardView cardView = (CardView)findViewById(R.id.card_view);
-
-        // Retrieve data from MainActivity on listview item click
+        // Retrieve data from fragment into answers_activity1 item click for display the data
         Intent i = getIntent();
         // Get a single position
         position = i.getExtras().getInt("position");
@@ -79,33 +84,8 @@ public class Answers_Activity1 extends AppCompatActivity {
 
         // Load the image into the ImageView followed by the position
         imgflag.setImageResource(flag[position]);
-
-        //
-
-        //
-
-
-        //add nav bottom
-        BottomNavigationView bottomNavigationView = (BottomNavigationView)
-                findViewById(R.id.bottom_navigation);
-/*
-        bottomNavigationView.setOnNavigationItemSelectedListener(
-                new BottomNavigationView.OnNavigationItemSelectedListener() {
-                    @Override
-                    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                        switch (item.getItemId()) {
-                            case R.id.action_favorites:
-
-                            case R.id.action_schedules:
-
-                            case R.id.action_music:
-
-                        }
-                        return true;
-                    }
-                });
-*/
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == android.R.id.home) {
@@ -114,19 +94,20 @@ public class Answers_Activity1 extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    // function for click of backpress  "<-" arrow
     @Override
     public void onBackPressed() {
         finish();
     }
-    public void buynow(View view)
-    {
 
+    //function for buy now  button
+    public void buynow(View view) {
         Intent intent = new Intent(Answers_Activity1.this, Answers_Activity2.class);
         startActivity(intent);
-
     }
-    public void addtocart(View view)
-    {
+
+    //fucntion for addtocart button
+    public void addtocart(View view) {
 
     }
 

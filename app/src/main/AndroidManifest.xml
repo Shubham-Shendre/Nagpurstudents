@@ -23,7 +23,9 @@
         <activity android:name=".AboutusActivity" />
         <activity android:name=".SingleItemView" />
         <activity android:name=".Answers_Activity1" />
-        <activity android:name=".Answers_Activity2"></activity>
+        <activity android:name=".Answers_Activity2" />
+        <activity android:name=".Answers_Activity3" />
+        <activity android:name=".Answers_Activity4"></activity>
     </application>
 
 </manifest>

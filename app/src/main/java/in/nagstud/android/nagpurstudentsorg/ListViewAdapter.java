@@ -1,4 +1,5 @@
 package in.nagstud.android.nagpurstudentsorg;
+//adapter class used to generate  the listview
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,13 +8,19 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-/**
- * Created by shubham dilip shendre aka SdS for nagstud Project nagpurstudents
- */
 
+/**
+ * Created for nagstud projectname: nagpurstudents.org
+ * creatorslist
+ * shubham dilip shendre aka ( SdS )
+ *
+ *
+ *
+ *
+ */
 public class ListViewAdapter extends BaseAdapter {
 
-    // Declare Variables
+    // Declare Variables for the data
     Context context;
     String[] rank;
     String[] country;
@@ -21,6 +28,7 @@ public class ListViewAdapter extends BaseAdapter {
     int[] flag;
     LayoutInflater inflater;
 
+    // get the data from the respective class for generating the listview
     public ListViewAdapter(Context context, String[] rank, String[] country,
                            String[] population, int[] flag) {
         this.context = context;

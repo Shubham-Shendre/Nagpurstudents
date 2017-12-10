@@ -11,8 +11,15 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
+
 /**
- * Created by shubham dilip shendre aka SdS for nagstud Project nagpurstudents
+ * Created for nagstud projectname: nagpurstudents.org
+ * creatorslist
+ * shubham dilip shendre aka ( SdS )
+ *
+ *
+ *
+ *
  */
 public class SubscribedActivity extends AppCompatActivity {
     // Declare Variables
@@ -31,7 +38,7 @@ public class SubscribedActivity extends AppCompatActivity {
         TextView textView = findViewById(R.id.text_view);
         textView.setText("A TextView in subscribed activity");
 
-        Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         ActionBar actionBar = getSupportActionBar();
@@ -39,20 +46,20 @@ public class SubscribedActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         // Generate sample data into string arrays
-        rank = new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" };
+        rank = new String[]{"1", "2", "3", "4", "5", "6", "7", "8", "9", "10"};
 
-        country = new String[] { "China", "India", "United States",
+        country = new String[]{"China", "India", "United States",
                 "Indonesia", "Brazil", "Pakistan", "Nigeria", "Bangladesh",
-                "Russia", "Japan" };
+                "Russia", "Japan"};
 
-        population = new String[] { "1,354,040,000", "1,210,193,422",
+        population = new String[]{"1,354,040,000", "1,210,193,422",
                 "315,761,000", "237,641,326", "193,946,886", "182,912,000",
-                "170,901,000", "152,518,015", "143,369,806", "127,360,000" };
+                "170,901,000", "152,518,015", "143,369,806", "127,360,000"};
 
-        flag = new int[] { R.drawable.china, R.drawable.india,
+        flag = new int[]{R.drawable.china, R.drawable.india,
                 R.drawable.unitedstates, R.drawable.indonesia,
                 R.drawable.brazil, R.drawable.pakistan, R.drawable.nigeria,
-                R.drawable.bangladesh, R.drawable.russia, R.drawable.japan };
+                R.drawable.bangladesh, R.drawable.russia, R.drawable.japan};
 
         // Locate the ListView in listview_main.xml
         list = (ListView) findViewById(R.id.listview);

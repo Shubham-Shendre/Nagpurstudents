@@ -11,10 +11,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+
 /**
- * Created by shubham dilip shendre aka SdS for nagstud Project nagpurstudents
+ * Created for nagstud projectname: nagpurstudents.org
+ * creatorslist
+ * shubham dilip shendre aka ( SdS )
+ *
+ *
+ *
+ *
  */
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private ViewPager viewPager;
     private DrawerLayout drawer;
@@ -26,7 +33,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        viewPager = (ViewPager)findViewById(R.id.view_pager);
+        viewPager = (ViewPager) findViewById(R.id.view_pager);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         drawer = (DrawerLayout) findViewById(R.id.drawerLayout);
 
@@ -82,44 +89,29 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public boolean onNavigationItemSelected(MenuItem item) {
         int id = item.getItemId();
 
-        if (id == R.id.menu_home)
-        {
+        if (id == R.id.menu_home) {
             viewPager.setCurrentItem(0);
-        }
-        else if (id == R.id.menu_question_papers)
-        {
+        } else if (id == R.id.menu_question_papers) {
             viewPager.setCurrentItem(1);
-        }
-        else if (id == R.id.menu_answer_papers)
-        {
+        } else if (id == R.id.menu_answer_papers) {
             viewPager.setCurrentItem(2);
-        }
-        else if (id == R.id.menu_syllabus)
-        {
+        } else if (id == R.id.menu_syllabus) {
             Intent intent = new Intent(this, SyllabusActivity.class);
             intent.putExtra("string", String.valueOf(item));
             startActivity(intent);
-        }
-        else if (id == R.id.menu_download)
-        {
+        } else if (id == R.id.menu_download) {
             Intent intent = new Intent(this, DownloadActivity.class);
             intent.putExtra("string", String.valueOf(item));
             startActivity(intent);
-        }
-        else if (id == R.id.menu_subscribed)
-        {
+        } else if (id == R.id.menu_subscribed) {
             Intent intent = new Intent(this, SubscribedActivity.class);
             intent.putExtra("string", String.valueOf(item));
             startActivity(intent);
-        }
-        else if (id == R.id.menu_events)
-        {
+        } else if (id == R.id.menu_events) {
             Intent intent = new Intent(this, EventsActivity.class);
             intent.putExtra("string", String.valueOf(item));
             startActivity(intent);
-        }
-        else if (id == R.id.menu_about_us)
-        {
+        } else if (id == R.id.menu_about_us) {
             Intent intent = new Intent(this, AboutusActivity.class);
             intent.putExtra("string", String.valueOf(item));
             startActivity(intent);

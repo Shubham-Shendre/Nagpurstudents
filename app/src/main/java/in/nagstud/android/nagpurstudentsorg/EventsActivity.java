@@ -13,7 +13,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 public class EventsActivity extends AppCompatActivity {
-    // Declare Variables
+    // Declare Variables for the data about the events
     ListView list;
     ListViewAdapter adapter;
     String[] rank;
@@ -25,34 +25,31 @@ public class EventsActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_events);
-
+        //add the textview to class to display the activityname
         TextView textView = findViewById(R.id.text_view);
         textView.setText("A TextView in events activity");
-
-        Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar);
+        //add the toolbar to class
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
+        //add the support of the action bar inside the toolbar
         ActionBar actionBar = getSupportActionBar();
         actionBar.setTitle(getIntent().getStringExtra("string"));
-
-
-
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         // Generate sample data into string arrays
-        rank = new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" };
+        rank = new String[]{"1", "2", "3", "4", "5", "6", "7", "8", "9", "10"};
 
-        country = new String[] { "China", "India", "United States",
+        country = new String[]{"China", "India", "United States",
                 "Indonesia", "Brazil", "Pakistan", "Nigeria", "Bangladesh",
-                "Russia", "Japan" };
+                "Russia", "Japan"};
 
-        population = new String[] { "1,354,040,000", "1,210,193,422",
+        population = new String[]{"1,354,040,000", "1,210,193,422",
                 "315,761,000", "237,641,326", "193,946,886", "182,912,000",
-                "170,901,000", "152,518,015", "143,369,806", "127,360,000" };
+                "170,901,000", "152,518,015", "143,369,806", "127,360,000"};
 
-        flag = new int[] { R.drawable.china, R.drawable.india,
+        flag = new int[]{R.drawable.china, R.drawable.india,
                 R.drawable.unitedstates, R.drawable.indonesia,
                 R.drawable.brazil, R.drawable.pakistan, R.drawable.nigeria,
-                R.drawable.bangladesh, R.drawable.russia, R.drawable.japan };
+                R.drawable.bangladesh, R.drawable.russia, R.drawable.japan};
 
         // Locate the ListView in listview_main.xml
         list = (ListView) findViewById(R.id.listview);

@@ -1,13 +1,22 @@
 package in.nagstud.android.nagpurstudentsorg;
-//not using this class adapter
+//this class is not under used
+//adapter class used to generate the grid view
+
 import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
+
 /**
- * Created by shubham dilip shendre aka SdS for nagstud Project nagpurstudents
+ * Created for nagstud projectname: nagpurstudents.org
+ * creatorslist
+ * shubham dilip shendre aka ( SdS )
+ *
+ *
+ *
+ *
  */
 public class GridViewAdapter extends BaseAdapter {
     private Context mContext;
@@ -42,7 +51,8 @@ public class GridViewAdapter extends BaseAdapter {
         imageView.setImageResource(mThumbIds[position]);
         return imageView;
     }
-//pass the data to the gridviewadapter to shw on the page
+
+    //pass the data to the gridviewadapter to shw on the page
     private Integer[] mThumbIds = {
             R.drawable.adele, R.drawable.adele,
             R.drawable.adele, R.drawable.adele,

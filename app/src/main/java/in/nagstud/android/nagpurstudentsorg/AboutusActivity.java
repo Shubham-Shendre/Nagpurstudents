@@ -1,5 +1,5 @@
 package in.nagstud.android.nagpurstudentsorg;
-
+// create the class file for about us xml file
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -13,7 +13,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 public class AboutusActivity extends AppCompatActivity {
-    // Declare Variables
+    // Declare Variables for list data
     ListView list;
     ListViewAdapter adapter;
     String[] rank;
@@ -25,34 +25,29 @@ public class AboutusActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_aboutus);
-
+        // add the textview into class file
         TextView textView = findViewById(R.id.text_view);
+        //send the tex for the textview from class to xml
         textView.setText("A TextView in about us activity");
-
+        //add the toolbar
         Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
+        //add the actionbar
         ActionBar actionBar = getSupportActionBar();
+        //add the title at the action bar
         actionBar.setTitle(getIntent().getStringExtra("string"));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         // Generate sample data into string arrays
         rank = new String[] { "1", "2", "3", "4" };
-
-        country = new String[] { "China", "India", "United States",
-                "Indonesia" };
-
-        population = new String[] { "1,354,040,000", "1,210,193,422",
-                "315,761,000", "237,641,326" };
-
+        country = new String[] { "China", "India", "United States","Indonesia" };
+        population = new String[] { "1,354,040,000", "1,210,193,422","315,761,000", "237,641,326" };
         flag = new int[] { R.drawable.china, R.drawable.india,
                 R.drawable.unitedstates, R.drawable.indonesia,
                 R.drawable.brazil, R.drawable.pakistan, R.drawable.nigeria,
                 R.drawable.bangladesh, R.drawable.russia, R.drawable.japan };
-
         // Locate the ListView in listview_main.xml
         list = (ListView) findViewById(R.id.listview);
-
         // Pass results to ListViewAdapter Class
         adapter = new ListViewAdapter(this, rank, country, population, flag);
         // Binds the Adapter to the ListView
@@ -80,7 +75,6 @@ public class AboutusActivity extends AppCompatActivity {
 
         });
     }
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == android.R.id.home) {
@@ -88,7 +82,6 @@ public class AboutusActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-
     @Override
     public void onBackPressed() {
         finish();

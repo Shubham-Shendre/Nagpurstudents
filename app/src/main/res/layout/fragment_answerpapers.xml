@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-    <!--
+<?xml version="1.0" encoding="utf-8"?><!-- this layout is use to display under the tab answer fragment--><!--
     * Created by shubham dilip shendre aka SdS for nagstud Project nagpurstudents
     -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -9,6 +8,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="@dimen/activity_horizontal_margin">
+    <!-- this layout is used for two buttons-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -19,24 +19,23 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Branch"
             android:background="@color/colorWhite"
             android:onClick="selectBranch"
-            />
+            android:text="Branch" />
 
         <Button
             android:id="@+id/selectSem"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Sem"
             android:background="@color/colorWhite"
-            android:onClick="selectSem"/>
+            android:onClick="selectSem"
+            android:text="Sem" />
 
     </LinearLayout>
-
+    <!-- two display the list of the answers according to the selected dialog box operation-->
     <ListView
+        android:id="@+id/listview"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/listview"/>
+        android:layout_height="wrap_content" />
 </LinearLayout>

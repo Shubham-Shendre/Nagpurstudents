@@ -3,8 +3,15 @@ package in.nagstud.android.nagpurstudentsorg;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+
 /**
- * Created by shubham dilip shendre aka SdS for nagstud Project nagpurstudents
+ * Created for nagstud projectname: nagpurstudents.org
+ * creatorslist
+ * shubham dilip shendre aka ( SdS )
+ *
+ *
+ *
+ *
  */
 public class ViewPagerAdapter extends FragmentPagerAdapter {
 
@@ -14,15 +21,11 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        if (position ==0)
-        {
+        if (position == 0) {
             return new Fragment_home();
-        }
-        else if (position == 1)
-        {
+        } else if (position == 1) {
             return new Fragment_questionpapers();
-        }
-        else return new Fragment_answerpapers();
+        } else return new Fragment_answerpapers();
     }
 
     @Override

@@ -1,8 +1,15 @@
 package in.nagstud.android.nagpurstudentsorg;
+//this class is used to view the single item  on click from the listview
+
 /**
- * Created by shubham dilip shendre aka SdS for nagstud Project nagpurstudents
+ * Created for nagstud projectname: nagpurstudents.org
+ * creatorslist
+ * shubham dilip shendre aka ( SdS )
+ *
+ *
+ *
+ *
  */
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
@@ -13,7 +20,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class SingleItemView extends AppCompatActivity {
-    // Declare Variables
+    // Declare Variables for the data passed form the listview
     TextView txtrank;
     TextView txtcountry;
     TextView txtpopulation;
@@ -29,10 +36,10 @@ public class SingleItemView extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.singleitemview);
-
-        Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar);
+        //add the toolbar top of the activity
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
+        //add the support for the action bar
         ActionBar actionBar = getSupportActionBar();
         actionBar.setTitle(getIntent().getStringExtra(String.valueOf(country)));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -68,6 +75,7 @@ public class SingleItemView extends AppCompatActivity {
 
 
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == android.R.id.home) {

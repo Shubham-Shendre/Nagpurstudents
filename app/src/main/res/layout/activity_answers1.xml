@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?> <!--
+<?xml version="1.0" encoding="utf-8"?><!-- this layout is use by the answers_activity1 class--><!--
     * Created by shubham dilip shendre aka SdS for nagstud Project nagpurstudents
     -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-
+    <!-- insert the toolbar-->
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -15,13 +15,12 @@
         android:minHeight="?attr/actionBarSize"
         android:theme="@style/ThemeOverlay.AppCompat.Dark"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-        app:titleTextColor="@android:color/white"
-        />
-
+        app:titleTextColor="@android:color/white" />
+    <!-- this layout is design for the item info-->
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content">
 
         <TextView
             android:id="@+id/ranklabel"
@@ -70,59 +69,59 @@
             android:layout_alignParentRight="true"
             android:background="#000000"
             android:padding="1dp" />
-
     </RelativeLayout>
+    <!-- this layout define the card view  after the item information -->
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+        <!-- textview display the activity name-->
         <TextView
+            android:id="@+id/activityname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=""
-            android:id="@+id/activityname"/>
-        <android.support.v7.widget.CardView
+            android:text="" />
+        <!-- create the card view -->
+        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:card_view="http://schemas.android.com/apk/res-auto"
-            xmlns:android="http://schemas.android.com/apk/res/android"
             android:id="@+id/card_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            card_view:cardCornerRadius="5dp"
             android:layout_margin="10dp"
-
-            app:contentPadding="10dp">
+            app:contentPadding="10dp"
+            card_view:cardCornerRadius="5dp">
+            <!-- layout for two buttons-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/buynow"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Buy now"
-                android:background="@color/colorPrimaryDark"
-                android:onClick="buynow"
-                />
+                <Button
+                    android:id="@+id/buynow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimaryDark"
+                    android:onClick="buynow"
+                    android:text="Buy now" />
 
-            <Button
-                android:id="@+id/addtocart"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Add to cart"
-                android:background="@color/colorPrimary"
-                android:onClick="addtocart"/>
+                <Button
+                    android:id="@+id/addtocart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimary"
+                    android:onClick="addtocart"
+                    android:text="Add to cart" />
             </LinearLayout>
-        <TextView
-            android:id="@+id/buy"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="110dp"
-
-            android:gravity="center"
-            android:text="buy"/>
+            <!-- A textview under the card view -->
+            <TextView
+                android:id="@+id/buy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="110dp"
+                android:gravity="center"
+                android:text="buy" />
         </android.support.v7.widget.CardView>
     </LinearLayout>
 </LinearLayout>

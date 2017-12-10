@@ -1,4 +1,5 @@
 package in.nagstud.android.nagpurstudentsorg;
+//this class retrive the data from the userstorage and  view inside the activity_download.xml
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,7 +14,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 public class DownloadActivity extends AppCompatActivity {
-    // Declare Variables
+    // Declare Variables for the data
     ListView list;
     ListViewAdapter adapter;
     String[] rank;
@@ -25,32 +26,31 @@ public class DownloadActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_download);
-
+        //insert the textview in class to show the activity name
         TextView textView = findViewById(R.id.text_view);
         textView.setText("A TextView in download activity");
-
-        Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar);
+        //add the toolbar at the top of the activity
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
+        //add the arrow to finsh or add the goback support
         ActionBar actionBar = getSupportActionBar();
         actionBar.setTitle(getIntent().getStringExtra("string"));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         // Generate sample data into string arrays
-        rank = new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" };
-
-        country = new String[] { "China", "India", "United States",
+        rank = new String[]{"1", "2", "3", "4", "5", "6", "7", "8", "9", "10"};
+        country = new String[]{"China", "India", "United States",
                 "Indonesia", "Brazil", "Pakistan", "Nigeria", "Bangladesh",
-                "Russia", "Japan" };
+                "Russia", "Japan"};
 
-        population = new String[] { "1,354,040,000", "1,210,193,422",
+        population = new String[]{"1,354,040,000", "1,210,193,422",
                 "315,761,000", "237,641,326", "193,946,886", "182,912,000",
-                "170,901,000", "152,518,015", "143,369,806", "127,360,000" };
+                "170,901,000", "152,518,015", "143,369,806", "127,360,000"};
 
-        flag = new int[] { R.drawable.china, R.drawable.india,
+        flag = new int[]{R.drawable.china, R.drawable.india,
                 R.drawable.unitedstates, R.drawable.indonesia,
                 R.drawable.brazil, R.drawable.pakistan, R.drawable.nigeria,
-                R.drawable.bangladesh, R.drawable.russia, R.drawable.japan };
+                R.drawable.bangladesh, R.drawable.russia, R.drawable.japan};
 
         // Locate the ListView in listview_main.xml
         list = (ListView) findViewById(R.id.listview);
