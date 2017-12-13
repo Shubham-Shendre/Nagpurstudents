@@ -34,4 +34,7 @@ dependencies {
 //for making the image view in circle
     compile 'de.hdodenhof:circleimageview:1.2.1'
     implementation 'com.android.support:cardview-v7:26.1.0'
+    //for creating the horizontal listview
+    compile 'com.android.support:recyclerview-v7:26.1.0'
+
 }

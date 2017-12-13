@@ -3,8 +3,8 @@
     <!-- this file is use for the background of the drawer header-->
     <gradient
         android:angle="135"
-        android:centerColor="#90a4ae"
-        android:endColor="#37474f"
-        android:startColor="#37474f"
+        android:centerColor="#f9f9f9"
+        android:endColor="#f9f9f9"
+        android:startColor="#f9f9f9"
         android:type="linear" />
 </shape>
