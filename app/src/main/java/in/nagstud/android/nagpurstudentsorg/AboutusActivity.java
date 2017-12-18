@@ -24,9 +24,7 @@ public class AboutusActivity extends AppCompatActivity {
     String[] country;
     String[] population;
     int[] flag;
-    //
-    private RecyclerView verticalList; //for vertical
-    private VerticalListAdapter verticalAdapter; //for vertical
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -45,16 +43,7 @@ public class AboutusActivity extends AppCompatActivity {
         actionBar.setTitle(getIntent().getStringExtra("string"));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        //
-        //for verticallistview
-        verticalList = (RecyclerView) findViewById(R.id.recyle_view);
-        verticalList.setHasFixedSize(true);
-        //set vertical LinearLayout as layout manager for vertial listview
-        LinearLayoutManager layoutManager = new LinearLayoutManager(AboutusActivity.this, LinearLayoutManager.VERTICAL, false);
-        verticalList.setLayoutManager(layoutManager);
-        verticalAdapter = new VerticalListAdapter(AboutusActivity.this);
-        verticalList.setAdapter(verticalAdapter);
-        //
+
         // Generate sample data into string arrays
         rank = new String[] { "1", "2", "3", "4" };
         country = new String[] { "China", "India", "United States","Indonesia" };
